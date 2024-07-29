@@ -41,5 +41,7 @@ const step = (timestamp) => {
         } else {
             obj.timedelta = timestamp -last_timestamp;
         }
-    } 
+    }
 }
+    last_timestamp =timestamp;
+    requestAnimationFrame(step); 

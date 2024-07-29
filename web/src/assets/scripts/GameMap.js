@@ -1,0 +1,29 @@
+// import { GameObject } from "./GameObject";
+
+export class GameMap extends GameMap{
+    constructor(ctx,parent){
+        super();
+        this.ctx = ctx;
+        this.parent = parent;
+        this.L = 0;
+        this.ros=13;
+        this.cols=13;
+    }
+    start() {
+
+    }
+    update_size(){
+        this.L=Math.min(this.parent.clientWIdth /this.cols, this.parent.clientHeight /this.rows);
+        this.ctx.canvas.width = this.L* this.cols;
+        this.ctx.canvas.height =this.L* this.rows;
+    }
+    update(){
+        this.update_size();
+        this.render();
+    }
+
+    render(){
+        this.ctx.fillStyle = 'green';
+        this.ctx.fillRect(0,0,this.ctx.canvas.width,this.ctx.canvas.height);
+    }
+}
