@@ -1,13 +1,13 @@
 <template>
     <div class="playground">
-        <GameMap></GameMap>
+        <GameMap />
     </div>
 </template>
 
 <script>
 import GameMap from './GameMap.vue'
 
-export default{
+export default {
     components: {
         GameMap,
     }
@@ -18,8 +18,6 @@ export default{
 div.playground {
     width: 60vw;
     height: 70vh;
-    background:lightblue;
-    margin : 40px auto;
-
+    margin: 40px auto;
 }
 </style>
